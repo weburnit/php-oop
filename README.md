@@ -1,7 +1,8 @@
 # Basic PHP and Symfony 2.8 interview
 
 Dear candidate, please follow this readme and solve all questions.
-Before you can start please prepare you environemt.
+
+> Before you can start, you should should prepare your development environemt.
 
 **Using Symfony with Homestead/Vagrant**
 
@@ -37,4 +38,4 @@ Resources:
 --------
 
 
-1. 
+1. Clone the [test repository](https://github.com/OskHa/php_interview_test) and make sure its working. Access the project with your favourite browser. You should see similar welcome screen.  
