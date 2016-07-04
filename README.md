@@ -33,6 +33,7 @@ Resources:
 
 *Help: Clone the [test repository](https://github.com/OskHa/php_interview_test) and make sure its working.*
 Access the project with your favourite browser. You should see similar welcome screen.  
+![Symfony welcome screen](https://raw.githubusercontent.com/OskHa/php_interview_test/master/symfony_screenshot.png)
 
 ## Good luck!
 
