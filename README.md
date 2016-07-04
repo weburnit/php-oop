@@ -31,6 +31,8 @@ Resources:
 > sudo apt-get install pkg-config libssl-dev
 > sudo pecl update-channels && sudo pecl install mongodb
 
+*Help: Clone the [test repository](https://github.com/OskHa/php_interview_test) and make sure its working.*
+Access the project with your favourite browser. You should see similar welcome screen.  
 
 ## Good luck!
 
@@ -38,4 +40,6 @@ Resources:
 --------
 
 
-1. Clone the [test repository](https://github.com/OskHa/php_interview_test) and make sure its working. Access the project with your favourite browser. You should see similar welcome screen.  
+## Test tasks:
+
+1. 
