@@ -68,8 +68,7 @@ Access the project with your favourite browser. You should see similar welcome s
 
 1. Define and create a service "BiosService" under namespace Test/InterviewBundle/Services and implement following methods
   * getAllAwards()
-  * BiosService must have a dependency of the @logger (@monolog.logger)
-  * Use the logger to log operations
+  * Use the logger to log operations (error, warning, debug)
 
 1. Create ContributionsController under namespace Test/InterviewBundle/Controller
 
