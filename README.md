@@ -16,17 +16,17 @@ Resources:
 
 
 **This test requires:**
-- Access to the internet
-- Best an php IDE
-- Working setup of PHP 5.6+ *(http://symfony.com/doc/current/reference/requirements.html)*
-- Composer *(https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx)*
-- MongoDB *(https://docs.mongodb.com/manual/installation/)*
-- Nginx or alternative simple web server
+- access to the internet
+- an php capable IDE (we suggest PhpStorm with symfony, yaml, twig and php annotations plugin)
+- working setup of PHP 5.6+ *(http://symfony.com/doc/current/reference/requirements.html)*
+- composer *(https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx)*
+- mongoDB *(https://docs.mongodb.com/manual/installation/)*
+- nginx or alternative simple web server
 
 *Tip: Install Robomongo on your OS*
 
 *Tip: Clone the [test repository](https://github.com/OskHa/php_interview_test) and make sure its working.*
-Access the project with your favourite browser. You should see similar welcome screen. Dont forget to run composer install
+Access the project with your favourite browser. You should see similar welcome screen. **Dont forget to run composer install.**
 ![Symfony welcome screen](https://raw.githubusercontent.com/OskHa/php_interview_test/master/symfony_screenshot.png)
 
 *Help: PHP 5.6+ (debian/ubuntu)*
@@ -41,7 +41,7 @@ Access the project with your favourite browser. You should see similar welcome s
 --------
 
 
-### Test tasks:
+## Test tasks:
 
 1. Change the text on symfony homepage from "Welcome to Symfony 2.8.8" to "This is a test"
 
