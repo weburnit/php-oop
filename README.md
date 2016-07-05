@@ -25,7 +25,7 @@ Resources:
 
 *Tip: Install Robomongo on your OS*
 
-*Tip: Clone the [test repository](https://github.com/OskHa/php_interview_test) and make sure its working.*
+*Tip: Clone the test repository and make sure its working.*
 Access the project with your favourite browser. You should see similar welcome screen. **Dont forget to run composer install.**
 ![Symfony welcome screen](https://raw.githubusercontent.com/OskHa/php_interview_test/master/symfony_screenshot.png)
 
@@ -97,7 +97,7 @@ Access the project with your favourite browser. You should see similar welcome s
 1. make a unit test for the BiosService
   * at least 1 method of your choice
 
-1. write a command called "mcmakler:test" that should accept 1 argument called id under namespace Test/InterviewBundle/Command
+1. write a command called "test:command" that should accept 1 argument called id under namespace Test/InterviewBundle/Command
   * The command should check if a Bios document with an id of the argument exists
   * if document exists, return info "document exists"
   * if document doesnt exist, return error "document doesnt exist"
@@ -113,7 +113,7 @@ test:
 
 1. Check the symfony application for errors and fix them if any.
 
-1. write a prompt for the command "mcmakler:test"
+1. write a prompt for the command "test:command"
   * Prompt text is "This is a test. Do you want to continue (y/N) ?"
   * If you decline, return error "Nothing done. Exiting..."
   * If you accept, run the command
