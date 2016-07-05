@@ -53,9 +53,9 @@ Access the project with your favourite browser. You should see similar welcome s
   * for route `/hello`
   * with a proper json return `{"hello":"world!"}`
 
-1. Create a "Bios" collection and load the example data:
-  * as json from mongodb website ([link](https://docs.mongodb.com/manual/reference/bios-example-collection/))
-  * download the archive dump ([link](https://raw.githubusercontent.com/OskHa/php_interview_test/master/symfony_mongodb_example.archive))
+1. Create a "Bios" collection and load the example data into your MongoDB server
+  * copy the json string from mongodb website ([link](https://docs.mongodb.com/manual/reference/bios-example-collection/))
+  * or download and load the archive dump ([link](https://raw.githubusercontent.com/OskHa/php_interview_test/master/symfony_mongodb_example.archive))
 
 1. Define ODM "Bios" document under namespace Test/InterviewBundle/Documents
 
