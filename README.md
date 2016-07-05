@@ -59,7 +59,7 @@ Access the project with your favourite browser. You should see similar welcome s
 
 1. Check the symfony application for errors and fix them if any.
 
-1. Create a hello controller
+1. Create a method helloAction under AppBundle\Controller\DefaultController
   * for route /hello
   * with a proper json return `{"hello":"world!"}`
 

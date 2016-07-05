@@ -5,4 +5,6 @@ parameters:
     # A secret key that's used to generate certain security-related tokens
     secret:            ThisTokenIsNotSoSecretChangeIt
 
-    mongodb_server: "mongodb://localhost:27017"
+    # MongoDB
+    mongodb.server: "mongodb://localhost:27017"
+    mongodb.default_database: "test"
