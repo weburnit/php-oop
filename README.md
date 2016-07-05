@@ -102,7 +102,6 @@ Access the project with your favourite browser. You should see similar welcome s
 ## Bonus tasks
 
 1. Go to app/config/config.yml and add the following yaml structure.
-
   ```
   mcmakler_test:
     ping: pong
