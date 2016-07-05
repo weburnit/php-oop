@@ -71,16 +71,18 @@ Access the project with your favourite browser. You should see similar welcome s
 
 1. Create ContributionsController under namespace Test/InterviewBundle/Controller
 
-1. Add a getContributions method to your ContributionsController
+1. Add a contributionsAction method to your ContributionsController
   * for route /contributions
-  * Make a use of your BiosService
-  * Avoid logic under controller
+  * make a use of your BiosService
+  * avoid logic under controller
+  * method should list all contributions
   * with a proper json return `["contrib", ...]`
 
-1. Add a getBiosByContribution method to your ContributionsController
+1. Add a biosByContributionAction method to your ContributionsController
   * for route /contributions/{contributionName}
-  * Make a use of your BiosService
-  * Avoid logic under controller
+  * make a use of your BiosService
+  * avoid logic under controller
+  * method should list all bios documents with provided contribution
   * with a proper json return `[{...}]`
 
 1. make a unit test for the controller
