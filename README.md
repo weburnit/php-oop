@@ -32,9 +32,8 @@ Access the project with your favourite browser. You should see similar welcome s
 *Help: PHP 5.6+ (debian/ubuntu)*
 > sudo apt-get install -qq php5-cli php5-fpm php5-mysqlnd php5-curl php5-gd php5-json php5-redis php5-imap php5-intl php5-imagick php5-mcrypt php5-xdebug php5-xmlrpc php5-xsl php5-twig php5-mongo php5-dev
 
-*Help: (optional) PECL MongoDB library*
-> sudo apt-get install pkg-config libssl-dev
-> sudo pecl update-channels && sudo pecl install mongodb
+*Help: (optional) PECL MongoDB library (debian/ubuntu)*
+> sudo apt-get install pkg-config libssl-dev && sudo pecl update-channels && sudo pecl install mongodb
 
 **Good luck!**
 
@@ -44,3 +43,68 @@ Access the project with your favourite browser. You should see similar welcome s
 
 ### Test tasks:
 
+1. Change the text on symfony homepage from "Welcome to Symfony 2.8.8" to "This is a test"
+
+1. Run the PhpUnit test. Check if there are any errors, if so fix them.
+
+1. Create a new Bundle "InterviewBundle" within the namespace "Test"
+
+1. Go to app/config/config.yml and add the following yaml structure. Replace the (vars) with whatever you want
+
+  ```
+  mcmakler_test:
+    ping: pong
+  ```
+
+1. Check the symfony application for errors and fix them if any.
+
+1. Create a method helloAction under AppBundle\Controller\DefaultController
+  * for route /hello
+  * with a proper json return `{"hello":"world!"}`
+
+1. Create a "Bios" collection and load the [example data](https://docs.mongodb.com/manual/reference/bios-example-collection/)
+
+1. Define ODM "Bios" document under namespace Test/InterviewBundle/Documents
+
+1. Define ODM "Bios" repository under namespace Test/InterviewBundle/Repositories
+
+1. Implement following repository methods (don't forget about interfaces)
+  * findByFirstName($firstName)
+  * findByContribution($contributionName)
+  * findByDeadBefore($year)
+
+1. Create a service "BiosService" under namespace Test/InterviewBundle/Services (don't forget about interfaces) and implement following methods
+  * getAllAwards()
+
+1. Create ContributionsController under namespace Test/InterviewBundle/Controller
+
+1. Add a getContributions method to your ContributionsController
+  * for route /contributions
+  * Make a use of your BiosService
+  * Avoid logic under controller
+  * with a proper json return `["contrib", ...]`
+
+1. Add a getBiosByContribution method to your ContributionsController
+  * for route /contributions/{contributionName}
+  * Make a use of your BiosService
+  * Avoid logic under controller
+  * with a proper json return `[{...}]`
+
+1. make a unit test for the controller
+  * check if hello controller is 200
+  * check if hello controller response is json
+  * check if route /contributions has response code 200
+  * check if route /contributions/fake has response code 404
+  * check if route /contributions/OOP has response code 200
+  
+1. make a unit test for the BiosService
+  * at least 1 method of your choice
+
+1. write a command called "mcmakler:test" that should accept 1 argument called id under namespace Test/InterviewBundle/Command
+
+1. write a prompt for the command "mcmakler:test"
+  * Prompt text is "This is a test. Do you want to continue (y/N) ?"
+  * If you decline, write "Nothing done. Exiting..." in color red
+  * If you accept, check if a Bios document with an id of the argument exists
+    * if document exists, return "document exists" in color green
+    * if document doesnt exist, return "document doesnt exist" in color red
