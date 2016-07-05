@@ -2,7 +2,7 @@
 
 Dear candidate, please follow this readme and solve all questions.
 
-> Before you can start, you should should prepare your development environemt.
+> Before you can start, you should prepare your development environemt.
 
 **Using Symfony with Homestead/Vagrant**
 
@@ -35,12 +35,35 @@ Resources:
 Access the project with your favourite browser. You should see similar welcome screen.  
 ![Symfony welcome screen](https://raw.githubusercontent.com/OskHa/php_interview_test/master/symfony_screenshot.png)
 
-## Good luck!
+**Good luck!**
 
 
 --------
 
 
-## Test tasks:
+### Test tasks:
 
-1. 
+1. Change the text on symfony homepage from "Welcome to Symfony 2.8.8" to "Welcome to McMakler"
+
+2. Run the PhpUnit test. Check if there are any errors, if so fix them.
+
+3. Create a new Bundle "McMaklerTest" within the namespace "McMakler"
+
+4. Go to app/config/config.yml and add the following yaml structure. Replace the (vars) with whatever you want
+
+  ```
+  mcmakler_test:
+    first_name: (my first name)
+    last_name: (my last name)
+    ping: pong
+  ```
+
+5. Check the symfony application for errors and fix them if any.
+
+6. Create a service ...
+6. Load the MongoDB dump ...
+6. Define document, repository for the mongodb collection
+6. implement some method
+6. make a unit test
+
+
