@@ -2,7 +2,7 @@
 
 Dear candidate, please follow this readme and solve all questions.
 
-> Before you can start, you should prepare your development environemt.
+> Before you can start, you should prepare your development environment.
 
 **Using Symfony with Homestead/Vagrant**
 
@@ -53,13 +53,15 @@ Access the project with your favourite browser. You should see similar welcome s
   * for route /hello
   * with a proper json return `{"hello":"world!"}`
 
-1. Create a "Bios" collection and load the [example data](https://docs.mongodb.com/manual/reference/bios-example-collection/)
+1. Create a "Bios" collection and load the example data:
+  * as json from mongodb website ([link](https://docs.mongodb.com/manual/reference/bios-example-collection/))
+  * download the archive dump ([link](https://raw.githubusercontent.com/OskHa/php_interview_test/master/symfony_mongodb_example.archive))
 
 1. Define ODM "Bios" document under namespace Test/InterviewBundle/Documents
 
 1. Define ODM "Bios" repository under namespace Test/InterviewBundle/Repositories
 
-1. Implement following repository methods (don't forget about interfaces)
+1. Implement following repository methods
   * findByFirstName($firstName)
   * findByContribution($contributionName)
   * findByDeadBefore($year)
