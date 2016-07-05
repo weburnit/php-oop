@@ -88,8 +88,8 @@ Access the project with your favourite browser. You should see similar welcome s
   * with a proper json return `[{...}]`
 
 1. make a unit test for the controller
-  * check if hello controller response is 200
-  * check if hello controller response is json
+  * check if route /hello has response code 200
+  * check if route /hello response is a json
   * check if route /contributions has response code 200
   * check if route /contributions/fake has response code 404
   * check if route /contributions/OOP has response code 200
