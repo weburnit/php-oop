@@ -50,7 +50,7 @@ Access the project with your favourite browser. You should see similar welcome s
 1. Create a new Bundle "InterviewBundle" within the namespace "Test"
 
 1. Create a method helloAction under AppBundle\Controller\DefaultController
-  * for route /hello
+  * for route `/hello`
   * with a proper json return `{"hello":"world!"}`
 
 1. Create a "Bios" collection and load the example data:
@@ -73,30 +73,30 @@ Access the project with your favourite browser. You should see similar welcome s
 1. Create ContributionsController under namespace Test/InterviewBundle/Controller
 
 1. Add a contributionsAction method to your ContributionsController
-  * for route /contributions
+  * for route `/contributions`
   * make a use of your BiosService
   * avoid logic under controller
   * method should list all contributions
   * with a proper json return `["contrib", ...]`
 
 1. Add a biosByContributionAction method to your ContributionsController
-  * for route /contributions/{contributionName}
+  * for route `/contributions/{contributionName}`
   * make a use of your BiosService
   * avoid logic under controller
   * method should list all bios documents with provided contribution
   * with a proper json return `[{...}]`
 
 1. make a unit test for the controller
-  * check if route /hello has response code 200
-  * check if route /hello response is a json
-  * check if route /contributions has response code 200
-  * check if route /contributions/fake has response code 404
-  * check if route /contributions/OOP has response code 200
+  * check if route `/hello` has response code 200
+  * check if route `/hello` response is a json
+  * check if route `/contributions` has response code 200
+  * check if route `/contributions/fake` has response code 404
+  * check if route `/contributions/OOP` has response code 200
   
 1. make a unit test for the BiosService
   * at least 1 method of your choice
 
-1. write a command called "test:command" that should accept 1 argument called id under namespace Test/InterviewBundle/Command
+1. write a command called `test:command` that should accept 1 argument called id under namespace Test/InterviewBundle/Command
   * The command should check if a Bios document with an id of the argument exists
   * if document exists, return info "document exists"
   * if document doesnt exist, return error "document doesnt exist"
@@ -112,10 +112,11 @@ test:
 
 1. Check the symfony application for errors and fix them if any.
 
-1. write a prompt for the command "test:command"
+1. write a prompt for the command `test:command`
   * Prompt text is "This is a test. Do you want to continue (y/N) ?"
   * If you decline, return error "Nothing done. Exiting..."
   * If you accept, run the command
 
 
-# That's it! Thank you for your participation! Good luck submitting your results!
+# That's it!
+## Thank you for your participation! Good luck submitting your results!
