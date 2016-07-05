@@ -115,3 +115,6 @@ test:
   * Prompt text is "This is a test. Do you want to continue (y/N) ?"
   * If you decline, write "Nothing done. Exiting..." in output color "error"
   * If you accept, run the command
+
+
+# That's it! Thank you for your participation! Good luck submitting your results!
