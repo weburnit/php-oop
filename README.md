@@ -49,15 +49,6 @@ Access the project with your favourite browser. You should see similar welcome s
 
 1. Create a new Bundle "InterviewBundle" within the namespace "Test"
 
-1. Go to app/config/config.yml and add the following yaml structure. Replace the (vars) with whatever you want
-
-  ```
-  mcmakler_test:
-    ping: pong
-  ```
-
-1. Check the symfony application for errors and fix them if any.
-
 1. Create a method helloAction under AppBundle\Controller\DefaultController
   * for route /hello
   * with a proper json return `{"hello":"world!"}`
@@ -73,8 +64,10 @@ Access the project with your favourite browser. You should see similar welcome s
   * findByContribution($contributionName)
   * findByDeadBefore($year)
 
-1. Create a service "BiosService" under namespace Test/InterviewBundle/Services (don't forget about interfaces) and implement following methods
+1. Define and create a service "BiosService" under namespace Test/InterviewBundle/Services and implement following methods
   * getAllAwards()
+  * BiosService must have a dependency of the @logger (@monolog.logger)
+  * Use the logger to log operations
 
 1. Create ContributionsController under namespace Test/InterviewBundle/Controller
 
@@ -101,10 +94,23 @@ Access the project with your favourite browser. You should see similar welcome s
   * at least 1 method of your choice
 
 1. write a command called "mcmakler:test" that should accept 1 argument called id under namespace Test/InterviewBundle/Command
+  * The command should check if a Bios document with an id of the argument exists
+  * if document exists, return "document exists" in output color "info"
+  * if document doesnt exist, return "document doesnt exist" in output color "error"
+
+
+## Bonus tasks
+
+1. Go to app/config/config.yml and add the following yaml structure. Replace the (vars) with whatever you want
+
+  ```
+  mcmakler_test:
+    ping: pong
+  ```
+
+1. Check the symfony application for errors and fix them if any.
 
 1. write a prompt for the command "mcmakler:test"
   * Prompt text is "This is a test. Do you want to continue (y/N) ?"
-  * If you decline, write "Nothing done. Exiting..." in color red
-  * If you accept, check if a Bios document with an id of the argument exists
-    * if document exists, return "document exists" in color green
-    * if document doesnt exist, return "document doesnt exist" in color red
+  * If you decline, write "Nothing done. Exiting..." in output color "error"
+  * If you accept, run the command
