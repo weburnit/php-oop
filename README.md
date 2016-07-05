@@ -54,8 +54,6 @@ Access the project with your favourite browser. You should see similar welcome s
 
   ```
   mcmakler_test:
-    first_name: (my first name)
-    last_name: (my last name)
     ping: pong
   ```
 
