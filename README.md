@@ -25,16 +25,16 @@ Resources:
 
 *Tip: Install Robomongo on your OS*
 
+*Tip: Clone the [test repository](https://github.com/OskHa/php_interview_test) and make sure its working.*
+Access the project with your favourite browser. You should see similar welcome screen. Dont forget to run composer install
+![Symfony welcome screen](https://raw.githubusercontent.com/OskHa/php_interview_test/master/symfony_screenshot.png)
+
 *Help: PHP 5.6+ (debian/ubuntu)*
 > sudo apt-get install -qq php5-cli php5-fpm php5-mysqlnd php5-curl php5-gd php5-json php5-redis php5-imap php5-intl php5-imagick php5-mcrypt php5-xdebug php5-xmlrpc php5-xsl php5-twig php5-mongo php5-dev
 
 *Help: (optional) PECL MongoDB library*
 > sudo apt-get install pkg-config libssl-dev
 > sudo pecl update-channels && sudo pecl install mongodb
-
-*Help: Clone the [test repository](https://github.com/OskHa/php_interview_test) and make sure its working.*
-Access the project with your favourite browser. You should see similar welcome screen.  
-![Symfony welcome screen](https://raw.githubusercontent.com/OskHa/php_interview_test/master/symfony_screenshot.png)
 
 **Good luck!**
 
