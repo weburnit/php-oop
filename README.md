@@ -45,11 +45,11 @@ Access the project with your favourite browser. You should see similar welcome s
 
 1. Change the text on symfony homepage from "Welcome to Symfony 2.8.8" to "Welcome to McMakler"
 
-2. Run the PhpUnit test. Check if there are any errors, if so fix them.
+1. Run the PhpUnit test. Check if there are any errors, if so fix them.
 
-3. Create a new Bundle "McMaklerTest" within the namespace "McMakler"
+1. Create a new Bundle "McMaklerTest" within the namespace "McMakler"
 
-4. Go to app/config/config.yml and add the following yaml structure. Replace the (vars) with whatever you want
+1. Go to app/config/config.yml and add the following yaml structure. Replace the (vars) with whatever you want
 
   ```
   mcmakler_test:
@@ -58,12 +58,27 @@ Access the project with your favourite browser. You should see similar welcome s
     ping: pong
   ```
 
-5. Check the symfony application for errors and fix them if any.
+1. Check the symfony application for errors and fix them if any.
+1. Create a controller with a json return `{"hello":"world!"}`
+1. Load the MongoDB dump ...
+1. Define document, repository for the mongodb collection
+1. implement some method
+1. Create a service that retrieves the db value and logs errors/misses...
+1. Create another controller taht returns some value from db
+1. make a unit test for the controller
+  * check if hello controller is 200
+  * check if hello controller response is json
+  * check if db controller response is 200 with proper id
+  * check if db controller response is 401 with bad id
+  * check if db controller response is 401 with bad id
+  
+1. make a unit test for the db service
+  * check response for proper id
+  * check response for bad id
 
-6. Create a service ...
-6. Load the MongoDB dump ...
-6. Define document, repository for the mongodb collection
-6. implement some method
-6. make a unit test
+1. write a command called "mcmakler:test" that should accept 1 argument called id
+1. write a prompt for the command "mcmakler:test"
+1. after propmt is declined, write in red "not ok"
+1. after propmt is accept use your service to retrieve the document by id and return it as json
 
 
