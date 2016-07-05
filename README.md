@@ -97,8 +97,8 @@ Access the project with your favourite browser. You should see similar welcome s
 
 1. write a command called "mcmakler:test" that should accept 1 argument called id under namespace Test/InterviewBundle/Command
   * The command should check if a Bios document with an id of the argument exists
-  * if document exists, return "document exists" in output color "info"
-  * if document doesnt exist, return "document doesnt exist" in output color "error"
+  * if document exists, return info "document exists"
+  * if document doesnt exist, return error "document doesnt exist"
 
 
 ## Bonus tasks
@@ -113,7 +113,7 @@ test:
 
 1. write a prompt for the command "mcmakler:test"
   * Prompt text is "This is a test. Do you want to continue (y/N) ?"
-  * If you decline, write "Nothing done. Exiting..." in output color "error"
+  * If you decline, return error "Nothing done. Exiting..."
   * If you accept, run the command
 
 
