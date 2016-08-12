@@ -18,7 +18,7 @@ Resources:
 **This test requires:**
 - access to the internet
 - an php capable IDE (we suggest PhpStorm with symfony, yaml, twig and php annotations plugin)
-- working setup of PHP 5.6+ *(http://symfony.com/doc/current/reference/requirements.html)*
+- working setup of PHP 5.6 *(http://symfony.com/doc/current/reference/requirements.html)*
 - composer *(https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx)*
 - mongoDB *(https://docs.mongodb.com/manual/installation/)*
 - nginx or alternative simple web server
