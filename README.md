@@ -43,9 +43,9 @@ Access the project with your favourite browser. You should see similar welcome s
 
 
 **Before you start**
-- Usage of Guzzle is allowed
-- You can extend composer.json / add own libraries
-- Try to follow SOLID and DRY concepts
+- usage of Guzzle is allowed
+- you can extend composer.json / add own libraries
+- try to follow SOLID and DRY concepts
 
 
 ## Test tasks:
@@ -59,8 +59,8 @@ Access the project with your favourite browser. You should see similar welcome s
   * with a proper json return `{"hello":"world!"}`
 
 1. Use the api.nasa.gov
-  * The API-KEY is `N7LkblDsc5aen05FJqBQ8wU4qSdmsftwJagVK7UD`
-  * Documentation: https://api.nasa.gov/neo/?api_key=N7LkblDsc5aen05FJqBQ8wU4qSdmsftwJagVK7UD
+  * the API-KEY is `N7LkblDsc5aen05FJqBQ8wU4qSdmsftwJagVK7UD`
+  * documentation: https://api.nasa.gov/neo/?api_key=N7LkblDsc5aen05FJqBQ8wU4qSdmsftwJagVK7UD
   
 1. Write a command
   * to request the data from the last 3 days from nasa api
@@ -134,7 +134,7 @@ Access the project with your favourite browser. You should see similar welcome s
     ping: pong
   ```
 
-1. write a command called `test:command` that should accept 1 argument called id under namespace Test/InterviewBundle/Command
+1. write a command called `test:command` which accepts 1 argument `id`
   * The command should check if a document with an id of the argument exists
   * if document exists, return info "document exists"
   * if document doesn't exist, return error "document doesn't exist"
