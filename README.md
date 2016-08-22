@@ -42,8 +42,8 @@ Access the project with your favourite browser. You should see similar welcome s
 
 
 **Before you start**
-- Usage of is optional but preferred.
-- Usage of FOSRest is allowed.
+- Usage of Guzzle is allowed
+- Usage of FOSRest is allowed
 - SOLID and DRY are very important rules
 - Tests are NOT optional
 
