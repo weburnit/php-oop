@@ -137,7 +137,7 @@ Access the project with your favourite browser. You should see similar welcome s
 5. Solve the statement. Write down your steps.
   
   ```
-  A ball and a bast cost 1.10 €. The bat is 1€ more expensive then the bat. How much cost the ball?
+  A ball and a bat cost 1.10 €. The bat is 1€ more expensive then the bat. How much cost the ball?
   ```
 
 6. Go to app/config/config.yml and add the following yaml structure. **(NOTICE: ping is as child-key of test)**
