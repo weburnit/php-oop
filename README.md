@@ -91,7 +91,7 @@ Access the project with your favourite browser. You should see similar welcome s
   ```
   $str1 = 'foobardoo';
   $str2 = 'foo';
-  if (strpos($str1,$str2)) {
+  if (strpos($str1, $str2)) {
       echo "\"" . $str1 . "\" contains \"" . $str2 . "\"";
   } else {
       echo "\"" . $str1 . "\" does not contain \"" . $str2 . "\"";
@@ -104,12 +104,12 @@ Access the project with your favourite browser. You should see similar welcome s
   
   **Why? How can this code be fixed to work correctly?**
   
-  *Write your solution under `bonusTasksSolutions.php`*
+  *Save your solution under `bonusTasksSolutions.php`*
   
-1. How many elements contain the $_POST data after executing this request and why?
+1. How many elements contains the $_POST data after executing this request and why?
   
   ```
-  // js
+  // JavaScript, jQuery
   $.ajax({
       url: 'http://my.site/some/path',
       method: 'post',
@@ -118,17 +118,17 @@ Access the project with your favourite browser. You should see similar welcome s
   });
   ```
   
-  *Write your solution under `bonusTasksSolutions.php`*
+  *Save your solution under `bonusTasksSolutions.php`*
   
 1. Solve the statement. Write down your solution.
   
   ```
-  A bread with butter cost 1.10 €. The bread is 1€ more expensive then the butter. How much cost the butter?
+  A bread with butter cost 1.10 €. The bread is 1€ more expensive then the butter. How much does the butter cost?
   ```
   
-  *Write your solution under `bonusTasksSolutions.php`*
+  *Save your solution under `bonusTasksSolutions.php`*
 
-1. Go to app/config/config.yml and add the following yaml structure. **(NOTICE: ping is as child-key of test)**
+1. Go to app/config/config.yml and add the following yaml structure. **(NOTICE: ping is a child-key of test)**
   ```
   test:
     ping: pong
@@ -137,7 +137,7 @@ Access the project with your favourite browser. You should see similar welcome s
 1. write a command called `test:command` that should accept 1 argument called id under namespace Test/InterviewBundle/Command
   * The command should check if a document with an id of the argument exists
   * if document exists, return info "document exists"
-  * if document doesnt exist, return error "document doesnt exist"
+  * if document doesn't exist, return error "document doesn't exist"
   * Add a propmpt for your command. Prompt text is "This is a test. Do you want to continue (y/N) ?"
   * If you decline, return error "Nothing done. Exiting..."
   * If you accept, run the command

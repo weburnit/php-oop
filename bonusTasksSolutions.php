@@ -37,4 +37,4 @@
 
 // A bread with butter cost 1.10 €. The bread is 1€ more expensive then the butter.
 //
-// How much cost the butter?
+// How much does the butter cost?
