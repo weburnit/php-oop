@@ -56,7 +56,7 @@ Access the project with your favourite browser. You should see similar welcome s
   * under `Nasa` namespace
   * for route `/`
   * with a proper json return `{"hello":"world!"}`
-  
+
 1. Use the api.nasa.gov
   * The API-KEY is `N7LkblDsc5aen05FJqBQ8wU4qSdmsftwJagVK7UD`
   * Documentation: https://api.nasa.gov/neo/?api_key=N7LkblDsc5aen05FJqBQ8wU4qSdmsftwJagVK7UD
@@ -84,6 +84,10 @@ Access the project with your favourite browser. You should see similar welcome s
   
 1. Test your application
 
+
+
+## Bonus tasks
+
 1. Consider the following code
 ```
 $str1 = 'yabadabadoo';
@@ -96,17 +100,20 @@ if (strpos($str1,$str2)) {
 ```
 
 The output will be:
+
 `"yabadabadoo" does not contain "yaba"`
+
 Why? How can this code be fixed to work correctly?
 
-1. What will this code output and why?
+2. What will this code output and why?
 
 ```
 $x = true and false;
 var_dump($x);
 ```
 
-1. How would you sort an array of strings to their natural case-insensitive order, while maintaing their original index association?
+3. How would you sort an array of strings to their natural case-insensitive order, while maintaing their original index association?
+
 ```
 array(
 	'0' => 'z1',
@@ -117,7 +124,8 @@ array(
 )
 ```
   
-1. How many elements contain the $_POST data after executing this request. Explain your answer.
+4. How many elements contain the $_POST data after executing this request. Explain your answer.
+
 ```
 // js
 $.ajax({
@@ -127,18 +135,20 @@ $.ajax({
     contentType: 'application/json'
 });
 ```
+  
+5. Solve the statement. Write down your steps.
 
+```
+A ball and a nest cost 1.10 €. The bat is 1€ more expensive then the bat. How much cost the ball?
+```
 
-
-## Bonus tasks
-
-1. Go to app/config/config.yml and add the following yaml structure. **(NOTICE: ping is as child-key of test)**
+6. Go to app/config/config.yml and add the following yaml structure. **(NOTICE: ping is as child-key of test)**
 ```
 test:
   ping: pong
 ```
 
-1. write a command called `test:command` that should accept 1 argument called id under namespace Test/InterviewBundle/Command
+7. write a command called `test:command` that should accept 1 argument called id under namespace Test/InterviewBundle/Command
   * The command should check if a document with an id of the argument exists
   * if document exists, return info "document exists"
   * if document doesnt exist, return error "document doesnt exist"
