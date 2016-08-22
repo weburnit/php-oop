@@ -44,8 +44,8 @@ Access the project with your favourite browser. You should see similar welcome s
 **Before you start**
 - Usage of Guzzle is allowed
 - Usage of FOSRest is allowed
-- SOLID and DRY are very important rules
 - Tests are NOT optional
+- Try to follow SOLID and DRY concepts
 
 
 ## Test tasks:
