@@ -63,7 +63,7 @@ Access the project with your favourite browser. You should see similar welcome s
   
 1. Write a command
   * to request the data from the last 3 days from nasa api
-  * reponse contains count of NEOs
+  * response contains count of NEOs
   * persist the values in your DB (mongoDB)
   * Define the document as follows:
     * date
@@ -102,39 +102,8 @@ Access the project with your favourite browser. You should see similar welcome s
   `"foobardoo" does not contain "foo"`
   
   Why? How can this code be fixed to work correctly?
-
-1. What will this code output and why?
-
-  ```
-  $x = true and false;
-  var_dump($x);
-  ```
-
-1. Sort an array to their natural case-insensitive order and maintain the original index.
-
-  ```
-  array(
-    '0' => 'z1',
-    '1' => 'Z10',
-    '2' => 'z12',
-    '3' => 'Z2',
-    '4' => 'z3',
-  )
-  ```
   
-  After sorting, should become:
-  
-  ```
-  array(
-    '0' => 'z1',
-    '3' => 'Z2',
-    '4' => 'z3',
-    '1' => 'Z10',
-    '2' => 'z12',
-  )
-  ```
-  
-1. How many elements contain the $_POST data after executing this request adn why?
+1. How many elements contain the $_POST data after executing this request and why?
   
   ```
   // js
