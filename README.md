@@ -87,64 +87,64 @@ Access the project with your favourite browser. You should see similar welcome s
 ## Bonus tasks
 
 1. Consider the following code
-```
-$str1 = 'yabadabadoo';
-$str2 = 'yaba';
-if (strpos($str1,$str2)) {
-    echo "\"" . $str1 . "\" contains \"" . $str2 . "\"";
-} else {
-    echo "\"" . $str1 . "\" does not contain \"" . $str2 . "\"";
-}
-```
-
-The output will be:
-
-`"yabadabadoo" does not contain "yaba"`
-
-Why? How can this code be fixed to work correctly?
+  ```
+  $str1 = 'yabadabadoo';
+  $str2 = 'yaba';
+  if (strpos($str1,$str2)) {
+      echo "\"" . $str1 . "\" contains \"" . $str2 . "\"";
+  } else {
+      echo "\"" . $str1 . "\" does not contain \"" . $str2 . "\"";
+  }
+  ```
+  
+  The output will be:
+  
+  `"yabadabadoo" does not contain "yaba"`
+  
+  Why? How can this code be fixed to work correctly?
 
 2. What will this code output and why?
 
-```
-$x = true and false;
-var_dump($x);
-```
+  ```
+  $x = true and false;
+  var_dump($x);
+  ```
 
 3. How would you sort an array of strings to their natural case-insensitive order, while maintaing their original index association?
 
-```
-array(
-	'0' => 'z1',
-	'1' => 'Z10',
-	'2' => 'z12',
-	'3' => 'Z2',
-	'4' => 'z3',
-)
-```
+  ```
+  array(
+    '0' => 'z1',
+    '1' => 'Z10',
+    '2' => 'z12',
+    '3' => 'Z2',
+    '4' => 'z3',
+  )
+  ```
   
 4. How many elements contain the $_POST data after executing this request. Explain your answer.
-
-```
-// js
-$.ajax({
-    url: 'http://my.site/some/path',
-    method: 'post',
-    data: JSON.stringify({a: 'a', b: 'b'}),
-    contentType: 'application/json'
-});
-```
+  
+  ```
+  // js
+  $.ajax({
+      url: 'http://my.site/some/path',
+      method: 'post',
+      data: JSON.stringify({a: 'a', b: 'b'}),
+      contentType: 'application/json'
+  });
+  ```
   
 5. Solve the statement. Write down your steps.
-
-```
-A ball and a nest cost 1.10 €. The bat is 1€ more expensive then the bat. How much cost the ball?
-```
+  
+  ```
+  A ball and a nest cost 1.10 €. The bat is 1€ more expensive then the bat. How much cost the ball?
+  ```
 
 6. Go to app/config/config.yml and add the following yaml structure. **(NOTICE: ping is as child-key of test)**
-```
-test:
-  ping: pong
-```
+  ```
+  test:
+    ping: pong
+  ```
 
 7. write a command called `test:command` that should accept 1 argument called id under namespace Test/InterviewBundle/Command
   * The command should check if a document with an id of the argument exists
