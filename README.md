@@ -17,7 +17,7 @@ Resources:
 
 **This test requires:**
 - access to the internet
-- an php capable IDE (we suggest PhpStorm with symfony, yaml, twig and php annotations plugin)
+- php capable IDE (we suggest PhpStorm with symfony, yaml, twig and php annotations plugin)
 - working setup of PHP 5.6 *(http://symfony.com/doc/current/reference/requirements.html)*
 - Doctrine ODM is not compatible with PHP 7.0
 - composer *(https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx)*
@@ -26,7 +26,7 @@ Resources:
 
 *Tip: Install Robomongo on your OS*
 
-*Tip: Clone the test repository and make sure its working.*
+*Tip: Clone the test repository and make sure it's working.*
 Access the project with your favourite browser. You should see similar welcome screen. **Dont forget to run composer install.**
 ![Symfony welcome screen](https://raw.githubusercontent.com/OskHa/php_interview_test/master/symfony_screenshot.png)
 
