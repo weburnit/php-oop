@@ -43,8 +43,7 @@ Access the project with your favourite browser. You should see similar welcome s
 
 **Before you start**
 - Usage of Guzzle is allowed
-- Usage of FOSRest is allowed
-- Tests are NOT optional
+- You can extend composer.json / add own libraries
 - Try to follow SOLID and DRY concepts
 
 
@@ -58,24 +57,22 @@ Access the project with your favourite browser. You should see similar welcome s
   * for route `/`
   * with a proper json return `{"hello":"world!"}`
   
-1. Create an service wrapper for api.nasa.gov
+1. Use the api.nasa.gov
   * The API-KEY is `N7LkblDsc5aen05FJqBQ8wU4qSdmsftwJagVK7UD`
   * Documentation: https://api.nasa.gov/neo/?api_key=N7LkblDsc5aen05FJqBQ8wU4qSdmsftwJagVK7UD
   
-1. Create two routes
-  * `/neo/last3` to request the data from the last 3 days
-  * `/neo/today` to request the todays data
+1. Write a command
+  * to request the data from the last 3 days from nasa api
+  * to request todays data from nasa api
   * reponse contains count of NEOs
-  * format JSON
   
-1. Everytime you request the data, persist the values in the DB (mongoDB).
+1. Write a command to persist the values of last 5 days in your DB (mongoDB).
   * Define the document as follows:
     * date
     * reference (neo_reference_id)
     * name
     * speed (kilometers_per_hour)
     * is hazardous (is_potentially_hazardous_asteroid)
-  * Avoid duplicated entries
 
 1. Create a route `/neo/hazardous`
   * display all DB documents which contain potentially hazardous asteroids
@@ -84,14 +81,52 @@ Access the project with your favourite browser. You should see similar welcome s
 1. Create a route `/neo/fastest`
   * display a DB document data with the fastest asteroid
   * format JSON
-
-1. Create a route `/neo/stress-test?cycles={int, default=100}` (??? or as a test)
-  * Use the same service as for `/neo/today`
-  * Test your application with 100, 1.000 and 10.000 cycles
   
 1. Test your application
-  * Notice: You done have to test the Nasa API
+
+1. Consider the following code
+```
+$str1 = 'yabadabadoo';
+$str2 = 'yaba';
+if (strpos($str1,$str2)) {
+    echo "\"" . $str1 . "\" contains \"" . $str2 . "\"";
+} else {
+    echo "\"" . $str1 . "\" does not contain \"" . $str2 . "\"";
+}
+```
+
+The output will be:
+`"yabadabadoo" does not contain "yaba"`
+Why? How can this code be fixed to work correctly?
+
+1. What will this code output and why?
+
+```
+$x = true and false;
+var_dump($x);
+```
+
+1. How would you sort an array of strings to their natural case-insensitive order, while maintaing their original index association?
+```
+array(
+	'0' => 'z1',
+	'1' => 'Z10',
+	'2' => 'z12',
+	'3' => 'Z2',
+	'4' => 'z3',
+)
+```
   
+1. How many elements contain the $_POST data after executing this request. Explain your answer.
+```
+// js
+$.ajax({
+    url: 'http://my.site/some/path',
+    method: 'post',
+    data: JSON.stringify({a: 'a', b: 'b'}),
+    contentType: 'application/json'
+});
+```
 
 
 
