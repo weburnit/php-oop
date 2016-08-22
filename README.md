@@ -102,6 +102,7 @@ Access the project with your favourite browser. You should see similar welcome s
   `"foobardoo" does not contain "foo"`
   
   Why? How can this code be fixed to work correctly?
+  Write your solution in this file `bonusTasksSolutions.php`
   
 1. How many elements contain the $_POST data after executing this request and why?
   
@@ -115,11 +116,15 @@ Access the project with your favourite browser. You should see similar welcome s
   });
   ```
   
+  Write your solution under `bonusTasksSolutions.php`
+  
 1. Solve the statement. Write down your solution.
   
   ```
   A bread with butter cost 1.10 €. The bread is 1€ more expensive then the butter. How much cost the butter?
   ```
+  
+  Write your solution in this file `bonusTasksSolutions.php`
 
 1. Go to app/config/config.yml and add the following yaml structure. **(NOTICE: ping is as child-key of test)**
   ```
