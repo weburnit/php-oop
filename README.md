@@ -88,8 +88,8 @@ Access the project with your favourite browser. You should see similar welcome s
 
 1. Consider the following code
   ```
-  $str1 = 'yabadabadoo';
-  $str2 = 'yaba';
+  $str1 = 'foobardoo';
+  $str2 = 'foo';
   if (strpos($str1,$str2)) {
       echo "\"" . $str1 . "\" contains \"" . $str2 . "\"";
   } else {
@@ -99,7 +99,7 @@ Access the project with your favourite browser. You should see similar welcome s
   
   The output will be:
   
-  `"yabadabadoo" does not contain "yaba"`
+  `"foobardoo" does not contain "foo"`
   
   Why? How can this code be fixed to work correctly?
 
@@ -110,7 +110,7 @@ Access the project with your favourite browser. You should see similar welcome s
   var_dump($x);
   ```
 
-3. How would you sort an array of strings to their natural case-insensitive order, while maintaing their original index association?
+3. Sort an array to their natural case-insensitive order and maintain the original index.
 
   ```
   array(
@@ -122,7 +122,7 @@ Access the project with your favourite browser. You should see similar welcome s
   )
   ```
   
-4. How many elements contain the $_POST data after executing this request. Explain your answer.
+4. How many elements contain the $_POST data after executing this request adn why?
   
   ```
   // js
@@ -134,10 +134,10 @@ Access the project with your favourite browser. You should see similar welcome s
   });
   ```
   
-5. Solve the statement. Write down your steps.
+5. Solve the statement. Write down your solution.
   
   ```
-  A ball and a bat cost 1.10 €. The bat is 1€ more expensive then the bat. How much cost the ball?
+  A bread with butter cost 1.10 €. The bread is 1€ more expensive then the butter. How much cost the butter?
   ```
 
 6. Go to app/config/config.yml and add the following yaml structure. **(NOTICE: ping is as child-key of test)**
