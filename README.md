@@ -103,14 +103,14 @@ Access the project with your favourite browser. You should see similar welcome s
   
   Why? How can this code be fixed to work correctly?
 
-2. What will this code output and why?
+1. What will this code output and why?
 
   ```
   $x = true and false;
   var_dump($x);
   ```
 
-3. Sort an array to their natural case-insensitive order and maintain the original index.
+1. Sort an array to their natural case-insensitive order and maintain the original index.
 
   ```
   array(
@@ -122,7 +122,19 @@ Access the project with your favourite browser. You should see similar welcome s
   )
   ```
   
-4. How many elements contain the $_POST data after executing this request adn why?
+  After sorting, should become:
+  
+  ```
+  array(
+    '0' => 'z1',
+    '3' => 'Z2',
+    '4' => 'z3',
+    '1' => 'Z10',
+    '2' => 'z12',
+  )
+  ```
+  
+1. How many elements contain the $_POST data after executing this request adn why?
   
   ```
   // js
@@ -134,19 +146,19 @@ Access the project with your favourite browser. You should see similar welcome s
   });
   ```
   
-5. Solve the statement. Write down your solution.
+1. Solve the statement. Write down your solution.
   
   ```
   A bread with butter cost 1.10 €. The bread is 1€ more expensive then the butter. How much cost the butter?
   ```
 
-6. Go to app/config/config.yml and add the following yaml structure. **(NOTICE: ping is as child-key of test)**
+1. Go to app/config/config.yml and add the following yaml structure. **(NOTICE: ping is as child-key of test)**
   ```
   test:
     ping: pong
   ```
 
-7. write a command called `test:command` that should accept 1 argument called id under namespace Test/InterviewBundle/Command
+1. write a command called `test:command` that should accept 1 argument called id under namespace Test/InterviewBundle/Command
   * The command should check if a document with an id of the argument exists
   * if document exists, return info "document exists"
   * if document doesnt exist, return error "document doesnt exist"
