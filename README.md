@@ -41,65 +41,57 @@ Access the project with your favourite browser. You should see similar welcome s
 --------
 
 
+**Before you start**
+- Usage of is optional but preferred.
+- Usage of FOSRest is allowed.
+- SOLID and DRY are very important rules
+- Tests are NOT optional
+
+
 ## Test tasks:
 
-1. Change the text on symfony homepage from "Welcome to Symfony 2.8.8" to "This is a test"
 
-1. Run the PhpUnit test. Check if there are any errors, if so fix them.
+1. Create a new Bundle "NasaBundle" within the namespace "Neo"
 
-1. Create a new Bundle "InterviewBundle" within the namespace "Test"
-
-1. Create a method helloAction under AppBundle\Controller\DefaultController
-  * for route `/hello`
+1. Create a default controller with a method helloAction 
+  * under `Nasa` namespace
+  * for route `/`
   * with a proper json return `{"hello":"world!"}`
-
-1. Create a "Bios" collection and load the example data into your MongoDB server
-  * copy the json string from mongodb website ([link](https://docs.mongodb.com/manual/reference/bios-example-collection/))
-  * or download and load the archive dump ([link](https://raw.githubusercontent.com/OskHa/php_interview_test/master/symfony_mongodb_example.archive))
-
-1. Define ODM "Bios" document under namespace Test/InterviewBundle/Documents
-
-1. Define ODM "Bios" repository under namespace Test/InterviewBundle/Repositories
-
-1. Implement following repository methods
-  * findByFirstName($firstName)
-  * findByContribution($contributionName)
-  * findByDeadBefore($year)
-
-1. Define and create a service "BiosService" under namespace Test/InterviewBundle/Services and implement following methods
-  * getAllAwards()
-  * Use the logger to log operations (error, warning, debug)
-
-1. Create ContributionsController under namespace Test/InterviewBundle/Controller
-
-1. Add a contributionsAction method to your ContributionsController
-  * for route `/contributions`
-  * make a use of your BiosService
-  * avoid logic under controller
-  * method should list all contributions
-  * with a proper json return `["contrib", ...]`
-
-1. Add a biosByContributionAction method to your ContributionsController
-  * for route `/contributions/{contributionName}`
-  * make a use of your BiosService
-  * avoid logic under controller
-  * method should list all bios documents with provided contribution
-  * with a proper json return `[{...}]`
-
-1. make a unit test for the controller
-  * check if route `/hello` has response code 200
-  * check if route `/hello` response is a json
-  * check if route `/contributions` has response code 200
-  * check if route `/contributions/fake` has response code 404
-  * check if route `/contributions/OOP` has response code 200
   
-1. make a unit test for the BiosService
-  * at least 1 method of your choice
+1. Create an service wrapper for api.nasa.gov
+  * The API-KEY is `N7LkblDsc5aen05FJqBQ8wU4qSdmsftwJagVK7UD`
+  
+1. Create two routes
+  * `/neo/last3` to request the data from the last 3 days
+  * `/neo/today` to request the todays data
+  * reponse contains count of NEOs
+  * format JSON
+  
+1. Everytime you request the data, persist the values in the DB (mongoDB).
+  * Define the document as follows:
+    * date
+    * reference (neo_reference_id)
+    * name
+    * speed (kilometers_per_hour)
+    * is hazardous (is_potentially_hazardous_asteroid)
+  * Avoid duplicated entries
 
-1. write a command called `test:command` that should accept 1 argument called id under namespace Test/InterviewBundle/Command
-  * The command should check if a Bios document with an id of the argument exists
-  * if document exists, return info "document exists"
-  * if document doesnt exist, return error "document doesnt exist"
+1. Create a route `/neo/hazardous`
+  * display all DB documents which contain potentially hazardous asteroids
+  * format JSON
+
+1. Create a route `/neo/fastest`
+  * display a DB document data with the fastest asteroid
+  * format JSON
+
+1. Create a route `/neo/stress-test?cycles={int, default=100}` (??? or as a test)
+  * Use the same service as for `/neo/today`
+  * Test your application with 100, 1.000 and 10.000 cycles
+  
+1. Test your application
+  * Notice: You done have to test the Nasa API
+  
+
 
 
 ## Bonus tasks
@@ -110,10 +102,11 @@ test:
   ping: pong
 ```
 
-1. Check the symfony application for errors and fix them if any.
-
-1. write a prompt for the command `test:command`
-  * Prompt text is "This is a test. Do you want to continue (y/N) ?"
+1. write a command called `test:command` that should accept 1 argument called id under namespace Test/InterviewBundle/Command
+  * The command should check if a document with an id of the argument exists
+  * if document exists, return info "document exists"
+  * if document doesnt exist, return error "document doesnt exist"
+  * Add a propmpt for your command. Prompt text is "This is a test. Do you want to continue (y/N) ?"
   * If you decline, return error "Nothing done. Exiting..."
   * If you accept, run the command
 
