@@ -63,10 +63,8 @@ Access the project with your favourite browser. You should see similar welcome s
   
 1. Write a command
   * to request the data from the last 3 days from nasa api
-  * to request todays data from nasa api
   * reponse contains count of NEOs
-  
-1. Write a command to persist the values of last 5 days in your DB (mongoDB).
+  * persist the values in your DB (mongoDB)
   * Define the document as follows:
     * date
     * reference (neo_reference_id)
