@@ -65,7 +65,7 @@ Dear candidate, please follow this readme and solve all questions.
 - Knowledge of modern best practices/coding patterns.
 - Componential thinking.
 - Knowledge of Docker.
-- Usage of symfony framework.
+- (PHP only) Usage of symfony framework.
 - Usage of MongoDB as persistance storage.
 
 
