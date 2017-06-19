@@ -17,15 +17,16 @@ Resources:
 
 **This test requires:**
 - access to the internet
-- an php capable IDE (we suggest PhpStorm with symfony, yaml, twig and php annotations plugin)
+- php capable IDE (we suggest PhpStorm with symfony, yaml, twig and php annotations plugin)
 - working setup of PHP 5.6 *(http://symfony.com/doc/current/reference/requirements.html)*
+- Doctrine ODM is not compatible with PHP 7.0
 - composer *(https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx)*
 - mongoDB *(https://docs.mongodb.com/manual/installation/)*
 - nginx or alternative simple web server
 
 *Tip: Install Robomongo on your OS*
 
-*Tip: Clone the test repository and make sure its working.*
+*Tip: Clone the test repository and make sure it's working.*
 Access the project with your favourite browser. You should see similar welcome screen. **Dont forget to run composer install.**
 ![Symfony welcome screen](https://raw.githubusercontent.com/OskHa/php_interview_test/master/symfony_screenshot.png)
 
@@ -41,79 +42,103 @@ Access the project with your favourite browser. You should see similar welcome s
 --------
 
 
+**Before you start**
+- usage of Guzzle is allowed
+- you can extend composer.json / add own libraries
+- try to follow SOLID and DRY concepts
+
+
 ## Test tasks:
 
-1. Change the text on symfony homepage from "Welcome to Symfony 2.8.8" to "This is a test"
 
-1. Run the PhpUnit test. Check if there are any errors, if so fix them.
+1. Create a new Bundle "NasaBundle" within the namespace "Neo"
 
-1. Create a new Bundle "InterviewBundle" within the namespace "Test"
-
-1. Create a method helloAction under AppBundle\Controller\DefaultController
-  * for route `/hello`
+1. Create a default controller with a method helloAction 
+  * under `Nasa` namespace
+  * for route `/`
   * with a proper json return `{"hello":"world!"}`
 
-1. Create a "Bios" collection and load the example data into your MongoDB server
-  * copy the json string from mongodb website ([link](https://docs.mongodb.com/manual/reference/bios-example-collection/))
-  * or download and load the archive dump ([link](https://raw.githubusercontent.com/OskHa/php_interview_test/master/symfony_mongodb_example.archive))
-
-1. Define ODM "Bios" document under namespace Test/InterviewBundle/Documents
-
-1. Define ODM "Bios" repository under namespace Test/InterviewBundle/Repositories
-
-1. Implement following repository methods
-  * findByFirstName($firstName)
-  * findByContribution($contributionName)
-  * findByDeadBefore($year)
-
-1. Define and create a service "BiosService" under namespace Test/InterviewBundle/Services and implement following methods
-  * getAllAwards()
-  * Use the logger to log operations (error, warning, debug)
-
-1. Create ContributionsController under namespace Test/InterviewBundle/Controller
-
-1. Add a contributionsAction method to your ContributionsController
-  * for route `/contributions`
-  * make a use of your BiosService
-  * avoid logic under controller
-  * method should list all contributions
-  * with a proper json return `["contrib", ...]`
-
-1. Add a biosByContributionAction method to your ContributionsController
-  * for route `/contributions/{contributionName}`
-  * make a use of your BiosService
-  * avoid logic under controller
-  * method should list all bios documents with provided contribution
-  * with a proper json return `[{...}]`
-
-1. make a unit test for the controller
-  * check if route `/hello` has response code 200
-  * check if route `/hello` response is a json
-  * check if route `/contributions` has response code 200
-  * check if route `/contributions/fake` has response code 404
-  * check if route `/contributions/OOP` has response code 200
+1. Use the api.nasa.gov
+  * the API-KEY is `N7LkblDsc5aen05FJqBQ8wU4qSdmsftwJagVK7UD`
+  * documentation: https://api.nasa.gov/neo/?api_key=N7LkblDsc5aen05FJqBQ8wU4qSdmsftwJagVK7UD
   
-1. make a unit test for the BiosService
-  * at least 1 method of your choice
+1. Write a command
+  * to request the data from the last 3 days from nasa api
+  * response contains count of NEOs
+  * persist the values in your DB (mongoDB)
+  * Define the document as follows:
+    * date
+    * reference (neo_reference_id)
+    * name
+    * speed (kilometers_per_hour)
+    * is hazardous (is_potentially_hazardous_asteroid)
 
-1. write a command called `test:command` that should accept 1 argument called id under namespace Test/InterviewBundle/Command
-  * The command should check if a Bios document with an id of the argument exists
-  * if document exists, return info "document exists"
-  * if document doesnt exist, return error "document doesnt exist"
+1. Create a route `/neo/hazardous`
+  * display all DB documents which contain potentially hazardous asteroids
+  * format JSON
+
+1. Create a route `/neo/fastest`
+  * display a DB document data with the fastest asteroid
+  * format JSON
+  
+1. Test your application
+
 
 
 ## Bonus tasks
 
-1. Go to app/config/config.yml and add the following yaml structure. **(NOTICE: ping is as child-key of test)**
-```
-test:
-  ping: pong
-```
+1. Consider the following code
+  ```
+  $str1 = 'foobardoo';
+  $str2 = 'foo';
+  if (strpos($str1, $str2)) {
+      echo "\"" . $str1 . "\" contains \"" . $str2 . "\"";
+  } else {
+      echo "\"" . $str1 . "\" does not contain \"" . $str2 . "\"";
+  }
+  ```
+  
+  The output will be:
+  
+  `"foobardoo" does not contain "foo"`
+  
+  **Why? How can this code be fixed to work correctly?**
+  
+  *Save your solution under `bonusTasksSolutions.php`*
+  
+1. How many elements contains the $_POST data after executing this request and why?
+  
+  ```
+  // JavaScript, jQuery
+  $.ajax({
+      url: 'http://my.site/some/path',
+      method: 'post',
+      data: JSON.stringify({a: 'a', b: 'b'}),
+      contentType: 'application/json'
+  });
+  ```
+  
+  *Save your solution under `bonusTasksSolutions.php`*
+  
+1. Solve the statement. Write down your solution.
+  
+  ```
+  A bread with butter cost 1.10 €. The bread is 1€ more expensive then the butter. How much does the butter cost?
+  ```
+  
+  *Save your solution under `bonusTasksSolutions.php`*
 
-1. Check the symfony application for errors and fix them if any.
+1. Go to app/config/config.yml and add the following yaml structure. **(NOTICE: ping is a child-key of test)**
+  ```
+  test:
+    ping: pong
+  ```
 
-1. write a prompt for the command `test:command`
-  * Prompt text is "This is a test. Do you want to continue (y/N) ?"
+1. write a command called `test:command` which accepts 1 argument `id`
+  * The command should check if a document with an id of the argument exists
+  * if document exists, return info "document exists"
+  * if document doesn't exist, return error "document doesn't exist"
+  * Add a propmpt for your command. Prompt text is "This is a test. Do you want to continue (y/N) ?"
   * If you decline, return error "Nothing done. Exiting..."
   * If you accept, run the command
 
