@@ -44,8 +44,10 @@ Dear candidate, please follow this readme and solve all questions.
   - display all DB entries which contain potentially hazardous asteroids
   - format JSON
 
-5. Create a route `/neo/fastest`
-  - display a DB entry data with the fastest asteroid
+5. Create a route `/neo/fastest?hazardous=(true|false)`
+  - analyze all data
+  - calculate the fastest ateroid
+  - with a hazardous parameter
   - format JSON
 
 6. Create a route `/neo/best-year?hazardous=(true|false)`
