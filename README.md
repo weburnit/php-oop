@@ -61,12 +61,9 @@ Dear candidate, please follow this readme and solve all questions.
   - calculate best month with most ateroids (not a month in a year)
   - with a hazardous parameter
   - format JSON
-  
-8. Provide link to your own github project
-  
+   
 ## Additional Instructions
 
-- For this repository
 - After your done, provide us the link to your repository
 - Leave comments where you were not sure how to properly proceed.
 - Implementation without README will be automatically rejected
