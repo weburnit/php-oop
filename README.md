@@ -47,8 +47,20 @@ Dear candidate, please follow this readme and solve all questions.
 5. Create a route `/neo/fastest`
   - display a DB entry data with the fastest asteroid
   - format JSON
+
+6. Create a route `/neo/best-year?hazardous=(true|false)`
+  - analyze all data
+  - calculate best year with most ateroids
+  - with a hazardous parameter
+  - format JSON
+
+7. Create a route `/neo/best-month?hazardous=(true|false)`
+  - analyze all data
+  - calculate best month with most ateroids (not a month in a year)
+  - with a hazardous parameter
+  - format JSON
   
-7. Provide link to your own github project
+8. Provide link to your own github project
   
 ## Additional Instructions
 
