@@ -6,6 +6,7 @@ Dear candidate, please follow this readme and solve all questions.
 
 **This test requires:**
 - access to the internet
+- your favourite IDE
 - working dev environment (PHP 5.6+ or Node.js 6+)
 - database (MongoDB, Postgres, MySQL)
 - nginx or alternative simple dev web server
@@ -18,7 +19,9 @@ Dear candidate, please follow this readme and solve all questions.
 
 ## Test tasks:
 
-1. Create a default controller with a method helloAction 
+**NOTE:** You are free to use any framework you wish. Bonus points for an explanation of your choice.
+
+1. Specify a default controller
   - for route `/`
   - with a proper json return `{"hello":"world!"}`
 
@@ -45,11 +48,14 @@ Dear candidate, please follow this readme and solve all questions.
   - display a DB entry data with the fastest asteroid
   - format JSON
   
-6. **NOTE:** You are free to use any framework you wish. Bonus points for an explanation of your choice.
+7. Provide link to your own github project
   
 ## Additional Instructions
 
-Leave comments where you were not sure how to properly proceed.
+- For this repository
+- After your done, provide us the link to your repository
+- Leave comments where you were not sure how to properly proceed.
+- Implementation without README will be automatically rejected
 
 ## Bonus Points
 
