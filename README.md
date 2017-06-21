@@ -67,9 +67,9 @@ Dear candidate, please follow this readme and solve all questions.
    
 ## Additional Instructions
 
-- After your done, provide us the link to your repository
+- After you're done, provide us the link to your repository.
 - Leave comments where you were not sure how to properly proceed.
-- Implementation without README will be automatically rejected
+- Implementations without a README will be automatically rejected.
 
 ## Bonus Points
 
@@ -81,7 +81,3 @@ Dear candidate, please follow this readme and solve all questions.
 - Knowledge of Docker.
 - (PHP only) Usage of symfony framework.
 - Usage of MongoDB as persistance storage.
-
-
-# That's it!
-Thank you for your participation! Good luck submitting your results!
