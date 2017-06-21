@@ -31,7 +31,7 @@ Dear candidate, please follow this readme and solve all questions.
   
 3. Write a command
   - to request the data from the last 3 days from nasa api
-  - response contains count of NEOs
+  - response contains count of Near-Earth Objects (NEOs)
   - persist the values in your DB
   - Define the model as follows:
     - date
