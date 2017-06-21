@@ -46,21 +46,21 @@ Dear candidate, please follow this readme and solve all questions.
 
 5. Create a route `/neo/fastest?hazardous=(true|false)`
   - analyze all data
-  - calculate and return the model of the fastest ateroid
+  - calculate and return the model of the fastest asteroid
   - with a hazardous parameter, where `true` means `is hazardous`
   - default hazardous value is `false`
   - format JSON
 
 6. Create a route `/neo/best-year?hazardous=(true|false)`
   - analyze all data
-  - calculate and return a year with most ateroids
+  - calculate and return a year with most asteroids
   - with a hazardous parameter, where `true` means `is hazardous`
   - default hazardous value is `false`
   - format JSON
 
 7. Create a route `/neo/best-month?hazardous=(true|false)`
   - analyze all data
-  - calculate and return a month with most ateroids (not a month in a year)
+  - calculate and return a month with most asteroids (not a month in a year)
   - with a hazardous parameter, where `true` means `is hazardous`
   - default hazardous value is `false`
   - format JSON
