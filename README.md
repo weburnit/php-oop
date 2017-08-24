@@ -7,7 +7,8 @@ Dear candidate, please follow this readme and solve all questions.
 **This test requires:**
 - access to the internet
 - your favourite IDE
-- working dev environment (PHP 5.6+ or Node.js 6+)
+- (PHP) working dev environment with PHP 7 and symfony 3.x
+- (Node) working dev environment with Node.js LTS
 - database (MongoDB, Postgres, MySQL)
 - nginx or alternative simple dev web server
 
@@ -67,17 +68,17 @@ Dear candidate, please follow this readme and solve all questions.
    
 ## Additional Instructions
 
+- Tests are not optional
+- (PHP) Symfony is the expected framework
 - After you're done, provide us the link to your repository.
 - Leave comments where you were not sure how to properly proceed.
 - Implementations without a README will be automatically rejected.
 
 ## Bonus Points
 
-- Test.
 - Clean code!
 - Knowledge of application flow.
 - Knowledge of modern best practices/coding patterns.
 - Componential thinking.
 - Knowledge of Docker.
-- (PHP only) Usage of symfony framework.
 - Usage of MongoDB as persistance storage.
