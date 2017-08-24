@@ -1,0 +1,15 @@
+version: '2'
+services:
+    application:
+        build:
+          context: .
+          dockerfile: Dockerfile
+          args:
+            IS_DEV_MODE: 1
+        environment:
+            APPLICATION_LIVE: 0
+            APP_DEBUG: 1
+            SESSION_DOMAIN: .lumen.local
+        env_file:
+            - images/php/main.env
+            - images/php/newrelic.env

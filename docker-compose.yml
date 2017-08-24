@@ -1,0 +1,136 @@
+version: '2'
+networks:
+    database:
+        driver: bridge
+    redis:
+        driver: bridge
+    sentinel:
+        driver: bridge
+    backend:
+        driver: bridge
+services:
+    sources:
+      build: images/sources
+      volumes:
+        - ./.data/postgresql:/var/lib/postgresql/data
+        - .:/var/www/html/apiapps
+        - ./auth.json:/root/.composer/auth.json
+
+    database:
+      build: images/sources
+
+    php:
+        extends:
+            file: php-compose.yml
+            service: application
+        volumes_from:
+          - sources
+        entrypoint: "/run.sh"
+        ports:
+            - "2222:22"
+        links:
+            - cache
+            - redis
+            - sentinel
+            - pgsql
+        networks:
+            - database # Access to database in NW with it
+            - redis # Access to Redis in NW with it
+            - sentinel
+            - backend
+    cron:
+        extends:
+            file: php-compose.yml
+            service: application
+        volumes_from:
+            - sources
+        working_dir: /var/www/html/apiapps
+        entrypoint: "/cron.sh"
+        links:
+            - cache
+            - redis
+            - sentinel
+            - pgsql
+            - lumen.local
+            - selenium
+        networks:
+            - database # Access to database in NW with it
+            - redis # Access to Redis in NW with it
+            - sentinel
+
+    cache:
+        image: memcached
+        networks:
+            - database
+        ports:
+            - "11211:11211"
+            - "9030:9000"
+
+    redis:
+        image: redis:4.0
+        ports:
+            - "6379:6379"
+        networks:
+            redis:
+                aliases:
+                    - redis
+    redis-slave:
+        image: redis:4.0
+        command: redis-server --slaveof redis 6379
+        links:
+            - redis
+        volumes_from:
+            - sources
+        volumes:
+            - ./.data:/data
+        networks:
+            redis:
+                aliases:
+                    - redis
+    sentinel:
+        build:
+            context: .
+            dockerfile: Sentinel.Dockerfile
+        ports:
+            - "26379:26379"
+        links:
+            - redis
+            - redis-slave
+        networks:
+            - redis
+            - sentinel
+
+    pgsql:
+        build: images/pgsql
+        hostname: db_master
+        environment:
+            MYSQL_ROOT_PASSWORD: evently_pass
+            MYSQL_DATABASE: evently_name
+            MYSQL_USER: evently_user
+            MYSQL_PASSWORD: evently_pass
+        ports:
+            - "5432:5432"
+        volumes_from:
+            - sources
+        networks:
+            - database
+
+    lumen.local:
+        build: images/nginx
+        networks:
+            - backend
+        volumes_from:
+            - sources
+            - php
+        command: nginx -g "daemon off;"
+        links:
+            - php
+            - sources
+        ports:
+            - "80:88"
+        environment:
+            NGINX_HOST: lumen.local
+    selenium:
+      image: selenium/standalone-chrome
+      links:
+        - lumen.local
