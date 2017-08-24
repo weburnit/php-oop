@@ -68,6 +68,7 @@ Dear candidate, please follow this readme and solve all questions.
    
 ## Additional Instructions
 
+- Fork this repository
 - Tests are not optional
 - (PHP) Symfony is the expected framework
 - After you're done, provide us the link to your repository.
