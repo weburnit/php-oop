@@ -23,9 +23,9 @@ $app = new Laravel\Lumen\Application(
     realpath(__DIR__.'/../')
 );
 
-// $app->withFacades();
+$app->withFacades();
 
-// $app->withEloquent();
+$app->withEloquent();
 
 /*
 |--------------------------------------------------------------------------
@@ -78,7 +78,9 @@ $app->singleton(
 |
 */
 
-// $app->register(App\Providers\AppServiceProvider::class);
+$app->register(App\Providers\AppServiceProvider::class);
+$app->register(Dingo\Api\Provider\LumenServiceProvider::class);
+$app->register(Indatus\LaravelPSRedis\LaravelPSRedisServiceProvider::class);
 // $app->register(App\Providers\AuthServiceProvider::class);
 // $app->register(App\Providers\EventServiceProvider::class);
 
@@ -92,9 +94,23 @@ $app->singleton(
 | can respond to, as well as the controllers that may handle them.
 |
 */
+$app[\Dingo\Api\Exception\Handler::class]->setErrorFormat(
+    [
+        'message'     => ':message',
+        'errors'      => ':errors',
+        'code'        => ':code',
+        'status_code' => ':status_code',
+        'debug'       => ':debug',
+    ]
+);
 
-$app->group(['namespace' => 'App\Http\Controllers'], function ($app) {
-    require __DIR__.'/../routes/web.php';
-});
+Dingo\Api\Http\Response::addFormatter('json', new Dingo\Api\Http\Response\Format\Jsonp());
+
+$app->group(
+    ['namespace' => 'App\Http\Controllers'],
+    function ($app) {
+        require __DIR__.'/../routes/api.php';
+    }
+);
 
 return $app;

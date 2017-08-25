@@ -9,7 +9,8 @@ services:
         environment:
             APPLICATION_LIVE: 0
             APP_DEBUG: 1
-            SESSION_DOMAIN: .lumen.local
+            API_DOMAIN: lumen.local
+            API_PREFIX: ""
         env_file:
             - images/php/main.env
             - images/php/newrelic.env

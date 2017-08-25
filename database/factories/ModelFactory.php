@@ -11,9 +11,16 @@
 |
 */
 
-$factory->define(App\User::class, function (Faker\Generator $faker) {
-    return [
-        'name' => $faker->name,
-        'email' => $faker->email,
-    ];
-});
+$factory->define(
+    \App\Models\OrbitModel::class,
+    function (Faker\Generator $faker) {
+        return
+            [
+                'hazardous'                => true,
+                'orbit_determination_date' => $faker->date('Y-m-d'),
+                'orbit_id'                 => $faker->uuid,
+                'name'                     => $faker->name,
+                'speed'                    => $faker->numberBetween(10000, 900000),
+            ];
+    }
+);
