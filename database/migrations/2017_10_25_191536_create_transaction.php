@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateOrbit extends Migration
+class CreateTransaction extends Migration
 {
     /**
      * Run the migrations.
@@ -14,14 +14,14 @@ class CreateOrbit extends Migration
     public function up()
     {
         Schema::create(
-            'orbit',
+            'transactions_histories',
             function (Blueprint $table) {
                 $table->increments('id');
-                $table->date('orbit_determination_date');
-                $table->string('orbit_id');
-                $table->string('name');
-                $table->float('speed');
-                $table->boolean('hazardous');
+                $table->unsignedInteger('fk_account');
+                $table->float('balance');
+                $table->text('type');
+                $table->timestamps();
+                $table->foreign('fk_account')->references('id')->on('accounts')->onDelete('cascade');
             }
         );
     }
@@ -33,6 +33,6 @@ class CreateOrbit extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('orbit');
+        //
     }
 }

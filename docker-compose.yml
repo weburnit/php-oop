@@ -37,6 +37,8 @@ services:
             - redis # Access to Redis in NW with it
             - sentinel
             - backend
+        environment:
+            - CACHE_DRIVER=redis
     cron:
         extends:
             file: php-compose.yml
@@ -102,11 +104,6 @@ services:
     pgsql:
         build: images/pgsql
         hostname: db_master
-        environment:
-            MYSQL_ROOT_PASSWORD: evently_pass
-            MYSQL_DATABASE: evently_name
-            MYSQL_USER: evently_user
-            MYSQL_PASSWORD: evently_pass
         ports:
             - "5432:5432"
         volumes_from:

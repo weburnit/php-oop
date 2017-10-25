@@ -12,15 +12,23 @@
 */
 
 $factory->define(
-    \App\Models\OrbitModel::class,
+    \App\Model\Customer::class,
     function (Faker\Generator $faker) {
         return
             [
-                'hazardous'                => true,
-                'orbit_determination_date' => $faker->date('Y-m-d'),
-                'orbit_id'                 => $faker->uuid,
-                'name'                     => $faker->name,
-                'speed'                    => $faker->numberBetween(10000, 900000),
+                'name' => $faker->name,
+                'email' => $faker->email,
+            ];
+    }
+);
+
+$factory->define(
+    \App\Model\Account::class,
+    function (Faker\Generator $faker) {
+        return
+            [
+                'balance' => 0,
+                'tier' => \App\Core\AccountInterface::BASIC_TIER,
             ];
     }
 );

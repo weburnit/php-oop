@@ -11,6 +11,16 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call('UsersTableSeeder');
+        $customer = factory(\App\Model\Customer::class)->create();
+        $account = factory(\App\Model\Account::class)->create(['fk_customer' => $customer->getKey()]);
+
+        /**
+         * @var $bank \App\Core\Bank
+         */
+        $bank = app(\App\Core\Bank::class);
+        $bank->deposit(new \App\Core\System\Transaction\Deposit(100, $account));
+        $bank->deposit(new \App\Core\System\Transaction\Deposit(100, $account));
+        $bank->withdrawn(new \App\Core\System\Transaction\Withdrawn(10, $account));
+        $bank->withdrawn(new \App\Core\System\Transaction\Withdrawn(5, $account));
     }
 }

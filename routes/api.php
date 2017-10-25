@@ -14,9 +14,5 @@ $api->version(
                 'uses' => APIController::class.'@home',
             ]
         );
-        $api->get('/neo/hazardous', APIController::class.'@hazardous');
-        $api->get('/neo/fastest', APIController::class.'@hazardous');
-        $api->get('/neo/best-month', APIController::class.'@bestMonth');
-        $api->get('/neo/best-year', APIController::class.'@bestYear');
     }
 );
