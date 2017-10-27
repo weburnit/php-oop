@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace App\Core\Customer\Accounts;
 
+use App\Core\System\Machine\AbstractAccountSM;
 use App\Core\System\Machine\Exception\SMUnacceptableStateException;
 use App\Core\System\Transaction\TransactionInterface;
 

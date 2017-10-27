@@ -6,11 +6,11 @@
  * Time: 10:28 PM
  */
 
-namespace Tests\Unit\Core\Customer\Accounts;
+namespace Tests\Unit\Core\Machine;
 
 
 use App\Core\AccountInterface;
-use App\Core\Customer\Accounts\AbstractAccountSM;
+use App\Core\System\Machine\AbstractAccountSM;
 use App\Core\System\Machine\SMCallbackInterface;
 use App\Core\System\Transaction\TransactionInterface;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Unit\Services\SM;
+namespace Tests\Unit\Core\Machine;
 
 use Illuminate\Database\Eloquent\Model;
 use App\Core\System\Machine\Model\AbstractStatusHistoryModel;

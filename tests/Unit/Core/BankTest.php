@@ -5,7 +5,7 @@ namespace Tests\Unit\Core;
 use App\Core\AccountInterface;
 use App\Core\AccountMachineBuilder;
 use App\Core\Bank;
-use App\Core\Customer\Accounts\AbstractAccountSM;
+use App\Core\System\Machine\AbstractAccountSM;
 use App\Core\Customer\AccountServiceInterface;
 use App\Core\CustomerInterface;
 use App\Core\System\Transaction\Deposit;

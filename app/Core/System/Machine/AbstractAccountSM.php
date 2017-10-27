@@ -1,11 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Core\Customer\Accounts;
+namespace App\Core\System\Machine;
 
 use App\Core\SMInterface;
-use App\Core\System\Machine\SMCallbackInterface;
-use App\Core\System\Machine\StateEntityInterface;
 use App\Core\System\Transaction\TransactionInterface;
 
 /**
@@ -38,8 +36,10 @@ abstract class AbstractAccountSM implements SMInterface
         if ($this->can($transaction) >= 0) {
             try {
                 $callback->before($transaction);
-                $this->getEntity()->addBalance($transaction->getAmount());
-                $this->getEntity()->getBalanceState($transaction->getType())->save();
+                $instance = $this->getEntity();
+                $instance->addBalance($transaction->getAmount());
+                if ($instance instanceof HistoricalEntityInterface)
+                    $instance->getBalanceState($transaction->getType())->save();
                 $callback->after($transaction);
 
                 return true;

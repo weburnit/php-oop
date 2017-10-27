@@ -3,13 +3,14 @@ declare(strict_types=1);
 
 namespace App\Core;
 
+use App\Core\System\Machine\HistoricalEntityInterface;
 use App\Core\System\Machine\StateEntityInterface;
 
 /**
  * Interface AccountInterface
  * @package App\Core\Customer\Accounts
  */
-interface AccountInterface extends StateEntityInterface
+interface AccountInterface extends StateEntityInterface, HistoricalEntityInterface
 {
     const BASIC_TIER = 'basic';
 
